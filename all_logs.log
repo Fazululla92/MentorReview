@@ -1,0 +1,4 @@
+1775757444641 | INFO | main | This is INFO message
+1775757444650 | WARNING | main | This is WARNING message
+1775757444650 | SEVERE | main | This is SEVERE message
+1775757444652 | SEVERE | main | Cannot divide by zero!
