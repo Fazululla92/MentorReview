@@ -1,5 +1,6 @@
 Feature: Petstore and Users API Testing
 
+  @Smoke @API
   Scenario: Create and validate pet in Petstore
     Given Petstore base URI is set
     When I create a pet with id 12345
@@ -8,6 +9,7 @@ Feature: Petstore and Users API Testing
     And I validate pet category is "dog"
     And I validate pet status is "pending"
 
+  @Smoke @API
   Scenario: Validate users API
     Given Users API base URI is set
     When I get all users
@@ -15,6 +17,7 @@ Feature: Petstore and Users API Testing
     And users list should contain more than 3 users
     And user "Ervin Howell" should exist
 
+  @Regression @API
   Scenario: Full Employee lifecycle testing
     Given I fetch all employees
     Then I verify employee count
@@ -35,8 +38,8 @@ Feature: Petstore and Users API Testing
     Then I verify delete is successful
     And I verify employee count decreased by 1
 
+  @Regression @API
   Scenario: Full defect lifecycle
-
     Given I create a Jira defect
     Then I store the defect id
 
@@ -45,7 +48,6 @@ Feature: Petstore and Users API Testing
 
     When I search the defect by id
     Then I verify defect is found
-
     When I attach a file to defect
     Then I verify attachment is successful
 

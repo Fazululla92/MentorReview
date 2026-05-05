@@ -1,4 +1,4 @@
-package TestNG;
+package API;
 
 import io.cucumber.java.en.*;
 import io.restassured.RestAssured;
